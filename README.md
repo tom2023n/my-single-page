@@ -1,41 +1,40 @@
-# Road Sign Vocabulary Learning System (爱尔兰驾考路标学习系统)
+# 爱尔兰路考路标学习
 
-这是一个基于 Web 的爱尔兰驾考路标学习应用，旨在帮助用户准备驾照路考。系统包含 140 个左右常见路标，提供中英文对照、发音朗读以及多种学习模式。
+一个用于记忆爱尔兰路考常见路标的单页学习工具，支持列表学习、翻卡记忆、测验练习、错题复习，以及白天/夜晚模式切换。
 
-## ✨ 功能特点 (Features)
+## 功能
 
-*   **列表模式 (List Mode)**: 浏览所有路标，支持实时搜索（中/英文）。
-*   **卡片模式 (Flashcard Mode)**: 模拟抽认卡，正面图片，背面答案，辅助记忆。
-*   **测验模式 (Quiz Mode)**: 互动式测验，自动计分，增强学习趣味性。
-*   **离线可用 (Offline Ready)**: 所有数据（包括图片）已嵌入代码，无需联网即可运行。
-*   **发音支持 (TTS)**: 利用浏览器自带的语音合成引擎朗读英文单词。
+- 列表学习：按图标、英文、中文释义快速浏览
+- 翻卡记忆：通过主动回忆强化记忆
+- 测验练习：用选择题检查掌握情况
+- 错题记录：自动累计错题，支持针对性复习
+- 学习进度：支持收藏、已掌握标记和继续上次学习
+- 主题切换：支持白天 / 夜晚模式
 
-## 🚀 如何运行 (How to Run)
+## 在线体验
 
-### 本地运行
-直接双击打开 `index.html` 文件即可。
+[https://tom2023n.github.io/my-single-page/](https://tom2023n.github.io/my-single-page/)
 
-### 在 GitHub Pages 上部署
-1.  将本项目 Fork 或 Clone 到你的 GitHub 仓库。
-2.  进入仓库的 **Settings** -> **Pages**。
-3.  在 **Build and deployment** 下的 **Source** 选择 `Deploy from a branch`。
-4.  **Branch** 选择 `main` (或 `master`) 分支的 `/ (root)` 目录。
-5.  点击 **Save**。
-6.  稍等片刻，GitHub 会给出一个在线访问链接。
+## 项目结构
 
-## 📂 项目结构 (Structure)
+- `index.html`：页面入口
+- `style.css`：页面样式
+- `script.js`：交互逻辑
+- `data.js`：路标数据
+- `data.json`：备用数据文件
 
-*   `index.html`: 主页面结构。
-*   `style.css`: 页面样式定义。
-*   `script.js`: 核心交互逻辑。
-*   `data.js`: 包含所有路标数据的 JS 文件（内含 Base64 编码图片）。
-*   `data.json`: 原始数据文件（开发用）。
+## 本地运行
 
-## 🛠️ 技术栈 (Tech Stack)
+直接用浏览器打开 `index.html` 即可。
 
-*   HTML5
-*   CSS3
-*   Vanilla JavaScript (原生 JS)
+如果你想避免某些浏览器对本地文件读取的限制，也可以使用本地静态服务器运行。
 
----
-*Created for efficient learning. Good luck with your driving test!* 🚗💨
+## 适用场景
+
+- 爱尔兰路考前集中记忆路标
+- 平时碎片化复习英文路标词汇
+- 用翻卡和测验模式做考前冲刺
+
+## License
+
+可按你的需要补充，例如 `MIT`。

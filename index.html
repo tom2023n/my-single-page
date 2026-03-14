@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>爱尔兰路考路标学习系统</title>
+    <title>爱尔兰路考路标学习</title>
+    <meta name="description" content="通过列表、翻卡和测验模式学习爱尔兰路考常见路标，支持搜索、收藏、学习进度、错题复习和白天夜晚模式切换。">
     <link rel="stylesheet" href="style.css">
+    <script src="data.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>🚦 爱尔兰路考路标学习</h1>
-        <nav>
-            <button onclick="setMode('list')" class="nav-btn active" id="btn-list">列表模式</button>
-            <button onclick="setMode('flashcard')" class="nav-btn" id="btn-flashcard">卡片模式</button>
-            <button onclick="setMode('quiz')" class="nav-btn" id="btn-quiz">测验模式</button>
+    <header class="site-header">
+        <div class="hero">
+            <div class="hero-topbar">
+                <p class="eyebrow">Ireland Driving Test Signs</p>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false" aria-label="切换白天夜晚模式">
+                    <span class="theme-toggle__icon" aria-hidden="true">☀</span>
+                    <span class="theme-toggle__text">夜晚模式</span>
+                </button>
+            </div>
+            <h1>爱尔兰路考路标学习</h1>
+            <p class="hero-copy">把爱尔兰路考高频路标做成可搜索、可翻卡、可测验的小练习，方便你在考前集中记忆，也能随时碎片化复习。</p>
+        </div>
+
+        <nav class="mode-nav" aria-label="学习模式切换">
+            <button type="button" class="nav-btn active" data-mode="list" id="btn-list" aria-pressed="true">列表学习</button>
+            <button type="button" class="nav-btn" data-mode="flashcard" id="btn-flashcard" aria-pressed="false">翻卡记忆</button>
+            <button type="button" class="nav-btn" data-mode="quiz" id="btn-quiz" aria-pressed="false">测验练习</button>
         </nav>
     </header>
 
-    <main id="app">
-        <!-- Content will be injected here by JavaScript -->
-    </main>
+    <main id="app" class="app-shell" aria-live="polite"></main>
 
-    <footer style="text-align: center; padding: 40px 20px; color: var(--text-sub); font-size: 14px; margin-top: 20px;">
-  <p style="margin: 0;">
-    Tom制作 &nbsp;|&nbsp; 
-    <a href="https://xhslink.com/m/3ltN39NlgAQ" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 4px;">
-      我的小红书
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 14px; height: 14px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-    </a>
-  </p>
-</footer>
-
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <footer class="site-footer">
+        <p>适合考前冲刺，也适合平时反复巩固爱尔兰路标词汇和图形记忆。Tom制作，如有错误欢迎<a href="https://www.xiaohongshu.com/user/profile/5d135119000000001601faa9?xsec_token=YB9h_x8jRhfXqoFpUCtNvfHIlLmd1rRd2QPT-9r1nUS4c=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=N0ozMzg2NUI2NzUyOTgwNjc5OThKRkdC&apptime=1770049540&share_id=276df56b5663471b87f8fdbea8b73474" target="_blank" rel="noopener noreferrer">反馈</a>。</p>
+        <p>图标来源：RSA 官方 Rules of the Road PDF，<a href="https://www.rsa.ie/docs/default-source/road-safety/r1---rules-of-the-road/ruleoftheroad_book-for-web.pdf?sfvrsn=b5d57830_7" target="_blank" rel="noopener noreferrer">查看原始资料</a>。</p>
+        <p>更多练习：<a href="https://tom2023n.github.io/rules-of-the-road/" target="_blank" rel="noopener noreferrer">爱尔兰路考问答</a>。</p>
+    </footer>
 </body>
 </html>
