@@ -1046,7 +1046,8 @@ html[data-theme="dark"] .stat-card::before {
 
 @media (max-width: 640px) {
     .site-header {
-        padding: 12px 12px 10px;
+        padding: 10px 10px 8px;
+        backdrop-filter: blur(10px);
     }
 
     .hero,
@@ -1074,41 +1075,45 @@ html[data-theme="dark"] .stat-card::before {
     }
 
     .hero-topbar {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 8px;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 10px;
     }
 
     .hero h1 {
-        font-size: 1.34rem;
-        line-height: 1.14;
+        font-size: 1.08rem;
+        line-height: 1.12;
     }
 
     .hero-copy {
-        margin-top: 6px;
-        font-size: 0.82rem;
-        line-height: 1.42;
-        max-width: none;
+        display: none;
     }
 
     .hero {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .eyebrow {
-        margin-bottom: 4px;
-        font-size: 0.7rem;
-        letter-spacing: 0.12em;
+        margin: 0;
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
     }
 
     .theme-toggle {
-        padding: 8px 12px;
-        font-size: 0.84rem;
+        padding: 6px 10px;
+        font-size: 0.78rem;
+        gap: 8px;
+        box-shadow: none;
     }
 
     .theme-toggle__icon {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .theme-toggle__text {
+        display: none;
     }
 
     .hero-meta,
@@ -1167,8 +1172,9 @@ html[data-theme="dark"] .stat-card::before {
     }
 
     .nav-btn {
-        padding: 8px 12px;
-        font-size: 0.84rem;
+        padding: 7px 10px;
+        font-size: 0.8rem;
+        border-radius: 999px;
     }
 
     .search-field,
