@@ -349,13 +349,16 @@ function renderDashboard() {
     sidePanel.appendChild(createElement("h3", "journey-title", "今日学习路径"));
     sidePanel.appendChild(renderJourneyList());
 
-    const statsPanel = createElement("div", "stats-grid stats-grid--full");
-    statsPanel.appendChild(renderStatCard("总词条", String(appData.length)));
-    statsPanel.appendChild(renderStatCard("已掌握", String(learnedCount)));
-    statsPanel.appendChild(renderStatCard("收藏词", String(starredCount)));
-    statsPanel.appendChild(renderStatCard("错题次数", String(mistakesCount)));
-    statsPanel.appendChild(renderStatCard("掌握率", `${masteryRate}%`));
-    statsPanel.appendChild(renderStatCard("今日建议", masteryRate >= 70 ? "多刷错题" : "先翻卡再测验"));
+    const statsPanel = createElement("div", "panel compact-stats-panel stats-grid--full");
+    statsPanel.appendChild(createElement("div", "section-kicker", "Quick stats"));
+    const statsGrid = createElement("div", "stats-grid stats-grid--compact");
+    statsGrid.appendChild(renderStatCard("总词条", String(appData.length)));
+    statsGrid.appendChild(renderStatCard("已掌握", String(learnedCount)));
+    statsGrid.appendChild(renderStatCard("收藏词", String(starredCount)));
+    statsGrid.appendChild(renderStatCard("错题次数", String(mistakesCount)));
+    statsGrid.appendChild(renderStatCard("掌握率", `${masteryRate}%`));
+    statsGrid.appendChild(renderStatCard("今日建议", masteryRate >= 70 ? "多刷错题" : "先翻卡再测验"));
+    statsPanel.appendChild(statsGrid);
 
     dashboard.appendChild(heroPanel);
     dashboard.appendChild(sidePanel);
